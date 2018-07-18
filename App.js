@@ -15,9 +15,19 @@ export default class App extends React.Component {
      await sound.playAsync();
    }
 
+   playVO = async () => {
+      await Audio.setIsEnabledAsync(true);
+      const sound = new Audio.Sound();
+      await sound.loadAsync(require('./m1.mp3'));
+      await sound.playAsync();
+    }
+
+
+
 
    componentDidMount(){
        this.playSound()
+       this.playVO()
      }
 
 
@@ -42,12 +52,11 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'green',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  texter: {
-    fontSize: 30,
-    paddingBottom: 50,
-  }
+  // texter: {
+  //   fontSize: 30,
+  //   paddingBottom: 50,
+  // }
 });
