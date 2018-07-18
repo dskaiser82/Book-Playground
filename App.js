@@ -4,30 +4,37 @@ import { Audio } from 'expo';
 
 
 
-
-
 export default class App extends React.Component {
+
+  state = {
+vo: true,
+music: true,
+counter: 0,
+pageNumber: 0
+}
 
   playSound = async () => {
      await Audio.setIsEnabledAsync(true);
      const sound = new Audio.Sound();
      await sound.loadAsync(require('./ambient.mp3'));
      await sound.playAsync();
+     await sound.setIsLoopingAsync(true); //Loop Ambient
    }
 
    playVO = async () => {
       await Audio.setIsEnabledAsync(true);
       const sound = new Audio.Sound();
-      await sound.loadAsync(require('./m1.mp3'));
+      await sound.loadAsync(require('./m2.mp3'));
       await sound.playAsync();
+
     }
 
 
 
 
    componentDidMount(){
-       this.playSound()
-       this.playVO()
+       // this.playSound()
+       // this.playVO()
      }
 
 
