@@ -46,7 +46,7 @@ counter: 0,
     return (
       <View style={styles.container}>
 
-      <ImageBackground source={require('./assets/pages/iphone/p1.jpg')}  style={{width: '100%', height: '100%'}}>
+      <ImageBackground source={require('./assets/pages/iphone/p1.jpg')}  style={{width: null, height: '100%'}}>
         <Text style={{
 
         }}>Hi</Text>
