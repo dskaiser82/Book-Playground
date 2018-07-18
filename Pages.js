@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   },
   parentFlex: {
     flex:1,
-    paddingTop: 100,
+    paddingTop: '7%',
     alignItems:'center',
     justifyContent:'center'
   }
