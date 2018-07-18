@@ -46,14 +46,9 @@ counter: 0,
 
   render() {
     return (
-      <View style={styles.container}>
+      <View>
 
-      <ImageBackground source={require('./assets/pages/iphone/p1.jpg')}  style={{width: null, height: '100%'}}>
-        <Text style={{
-
-        }}>Hi</Text>
-     </ImageBackground>
-
+        <Pages/>
 
 
       </View>

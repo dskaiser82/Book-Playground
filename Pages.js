@@ -7,7 +7,12 @@ class Pages extends Component {
   return (
     <View>
 
-      
+      <ImageBackground source={require('./assets/pages/iphone/p1.jpg')}  style={{width: null, height: '100%'}}>
+        <Text style={{
+
+        }}>Hi</Text>
+      </ImageBackground>
+
     </View>
   );
  }
