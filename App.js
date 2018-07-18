@@ -43,7 +43,7 @@ counter: 0,
     return (
       <View style={styles.container}>
 
-        <Image source={require('./assets/pages/p1.jpg')} style={{
+        <Image source={require('./assets/pages/iphone/p1.jpg')} style={{
           flex: 1,
           alignSelf: 'stretch',
           width: undefined,
