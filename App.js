@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, ImageBackground } from 'react-native';
 import { Audio, ScreenOrientation } from 'expo';
 
 
@@ -46,16 +46,13 @@ counter: 0,
     return (
       <View style={styles.container}>
 
-        <Image source={require('./assets/pages/iphone/p1.jpg')} style={{
-          flex: 1,
-          alignSelf: 'stretch',
-          width: undefined,
-          height: undefined
-        }} />
-
+      <ImageBackground source={require('./assets/pages/iphone/p1.jpg')}  style={{width: '100%', height: '100%'}}>
         <Text style={{
-          position: 'absolute',
+
         }}>Hi</Text>
+     </ImageBackground>
+
+
 
       </View>
 
@@ -64,13 +61,13 @@ counter: 0,
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  texter: {
-    fontSize: 30,
-    paddingBottom: 50,
-  }
+  // container: {
+  //   flex: 1,
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // },
+  // texter: {
+  //   fontSize: 30,
+  //   paddingBottom: 50,
+  // }
 });
