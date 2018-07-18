@@ -26,12 +26,11 @@ export default class App extends React.Component {
       <View style={styles.container}>
 
         <Image source={require('./p1.jpg')} style={{
-    flex: 1,
-    alignSelf: 'stretch',
-    width: undefined,
-    height: undefined
-  }} />
-
+          flex: 1,
+          alignSelf: 'stretch',
+          width: undefined,
+          height: undefined
+        }} />
 
 
       </View>
