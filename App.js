@@ -1,9 +1,24 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { Audio } from 'expo';
+
+
 
 
 
 export default class App extends React.Component {
+
+  playSound = async () => {
+     await Audio.setIsEnabledAsync(true);
+     const sound = new Audio.Sound();
+     await sound.loadAsync(require('./ambient.mp3'));
+     await sound.playAsync();
+   }
+
+
+   componentDidMount(){
+       this.playSound()
+     }
 
 
   render() {
