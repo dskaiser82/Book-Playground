@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
-import { Audio } from 'expo';
+import { Audio, ScreenOrientation } from 'expo';
+
 
 
 
@@ -36,6 +37,8 @@ counter: 0,
    componentDidMount(){
        // this.playSound()
        // this.playVO()
+       //Expo force landscape
+       ScreenOrientation.allow(Expo.ScreenOrientation.Orientation.LANDSCAPE);
      }
 
 
@@ -50,6 +53,9 @@ counter: 0,
           height: undefined
         }} />
 
+        <Text style={{
+          position: 'absolute',
+        }}>Hi</Text>
 
       </View>
 
@@ -63,8 +69,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  // texter: {
-  //   fontSize: 30,
-  //   paddingBottom: 50,
-  // }
+  texter: {
+    fontSize: 30,
+    paddingBottom: 50,
+  }
 });
