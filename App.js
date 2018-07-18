@@ -10,7 +10,6 @@ export default class App extends React.Component {
 vo: true,
 music: true,
 counter: 0,
-pageNumber: 0 //I may only need counter
 }
 
 //possible Routs 1) Home 2) Select 3) Pages
@@ -18,7 +17,7 @@ pageNumber: 0 //I may only need counter
   playSound = async () => {
      await Audio.setIsEnabledAsync(true);
      const sound = new Audio.Sound();
-     await sound.loadAsync(require('./ambient.mp3'));
+     await sound.loadAsync(require('./assets/music/ambient.mp3'));
      await sound.playAsync();
      await sound.setIsLoopingAsync(true); //Loop Ambient
    }
@@ -26,7 +25,7 @@ pageNumber: 0 //I may only need counter
    playVO = async () => {
       await Audio.setIsEnabledAsync(true);
       const sound = new Audio.Sound();
-      await sound.loadAsync(require('./m2.mp3'));
+      await sound.loadAsync(require('./assets/vo/m2.mp3'));
       await sound.playAsync();
 
     }
@@ -44,7 +43,7 @@ pageNumber: 0 //I may only need counter
     return (
       <View style={styles.container}>
 
-        <Image source={require('./p1.jpg')} style={{
+        <Image source={require('./assets/pages/p1.jpg')} style={{
           flex: 1,
           alignSelf: 'stretch',
           width: undefined,
