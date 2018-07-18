@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, Button, ImageBackground } from 'react-native';
 import { Audio, ScreenOrientation } from 'expo';
 
+import Pages from './Pages.js';
+
 
 
 
