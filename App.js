@@ -10,8 +10,10 @@ export default class App extends React.Component {
 vo: true,
 music: true,
 counter: 0,
-pageNumber: 0
+pageNumber: 0 //I may only need counter
 }
+
+//possible Routs 1) Home 2) Select 3) Pages
 
   playSound = async () => {
      await Audio.setIsEnabledAsync(true);
