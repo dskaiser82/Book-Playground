@@ -9,9 +9,11 @@ class Pages extends Component {
 
       <ImageBackground
        source={require('./assets/pages/iphone/p1.jpg')}  style={styles.backGround}>
-       <View style={styles.parentFlex}>
-         <Image source={require('./assets/text/t1.png')} />
-       </View>
+
+       <View  style={styles.parentFlex} >
+       <Image style={styles.textBg}  source={require('./assets/text/text-bg-iphone.png')} />
+        <Image source={require('./assets/text/t1.png')} />
+      </View>
 
       </ImageBackground>
 
@@ -26,9 +28,15 @@ const styles = StyleSheet.create({
     width: null,
     height: '100%',
   },
+  textBg: {
+    width: '100%',
+    height: null,
+  },
+  red: {
+
+  },
   parentFlex: {
     flex:1,
-    paddingTop: '7%',
     alignItems:'center',
     justifyContent:'center'
   }
