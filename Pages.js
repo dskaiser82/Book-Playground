@@ -5,15 +5,14 @@ import { StyleSheet, Text, View, Image, Button, ImageBackground, Alert, Touchabl
 class Pages extends Component {
 
   changePage = () => {
-       let bob = "bob"
-       Alert.alert(bob);
+       let go = "go"
+       Alert.alert(go);
   }
 
   render() {
 
   return (
     <View>
-
       <ImageBackground
        source={require('./assets/pages/phone/p1.jpg')}  style={styles.backGround}>
 
@@ -22,14 +21,15 @@ class Pages extends Component {
         <TouchableHighlight onPress={this.changePage}>
           <Image
             style={styles.prev} source={require('./assets/text/phone/ui_prev.png')}
-
-           />
+          />
         </TouchableHighlight>
-        <Image style={styles.next} source={require('./assets/text/phone/ui_next.png')} />
+
+        <TouchableHighlight onPress={this.changePage}>
+          <Image style={styles.next} source={require('./assets/text/phone/ui_next.png')} />
+        </TouchableHighlight>
       </View>
 
       </ImageBackground>
-
     </View>
   );
  }
@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 30,
     left: -70,
-    zIndex: 10
   },
   next: {
     position: "absolute",
