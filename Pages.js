@@ -5,10 +5,12 @@ import { StyleSheet, Text, View, Image, Button, ImageBackground, Alert, Touchabl
 class Pages extends Component {
 
   changePage = () => {
-
+       let bob = "bob"
+       Alert.alert(bob);
   }
 
   render() {
+
   return (
     <View>
 
@@ -17,9 +19,7 @@ class Pages extends Component {
 
        <View  style={styles.paper} >
         <Image source={require('./assets/text/phone/t1.png')} />
-        <TouchableHighlight onPress={() => {
-          Alert.alert('You tapped the button!');
-        }}>
+        <TouchableHighlight onPress={this.changePage}>
           <Image
             style={styles.prev} source={require('./assets/text/phone/ui_prev.png')}
 
