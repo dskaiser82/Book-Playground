@@ -48,7 +48,9 @@ counter: 0,
     return (
       <View>
 
-        <Pages/>
+        <Pages
+          counter={this.state.counter}
+        />
 
 
       </View>
