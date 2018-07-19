@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, Button, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, ImageBackground, Alert, TouchableHighlight } from 'react-native';
 
 
 class Pages extends Component {
+
+  changePage = () => {
+
+  }
+
   render() {
   return (
     <View>
@@ -12,7 +17,14 @@ class Pages extends Component {
 
        <View  style={styles.paper} >
         <Image source={require('./assets/text/phone/t1.png')} />
-        <Image style={styles.prev} source={require('./assets/text/phone/ui_prev.png')} />
+        <TouchableHighlight onPress={() => {
+          Alert.alert('You tapped the button!');
+        }}>
+          <Image
+            style={styles.prev} source={require('./assets/text/phone/ui_prev.png')}
+
+           />
+        </TouchableHighlight>
         <Image style={styles.next} source={require('./assets/text/phone/ui_next.png')} />
       </View>
 
@@ -30,7 +42,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   paper: {
-    // backgroundColor: 'rgba(52, 52, 52, 0.8)',
+    backgroundColor: 'rgba(52, 52, 52, 0.8)',
     position: "absolute",
     bottom: -5,
     left: '15%',
@@ -40,11 +52,13 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 30,
     left: -70,
+    zIndex: 10
   },
   next: {
     position: "absolute",
     bottom: 30,
     right: 140,
+
   },
   parentFlex: {
     flex:1,

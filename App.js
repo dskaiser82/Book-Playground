@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, ImageBackground, Alert } from 'react-native';
 import { Audio, ScreenOrientation } from 'expo';
 
 import Pages from './Pages.js';
@@ -37,6 +37,7 @@ counter: 0,
 
 
    componentDidMount(){
+  
        // this.playSound()
        // this.playVO()
        //Expo force landscape
