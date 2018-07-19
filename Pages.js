@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     height: null,
   },
   red: {
-    backgroundColor: 'rgba(52, 52, 52, 0.8)',
+    // backgroundColor: 'rgba(52, 52, 52, 0.8)',
     position: "absolute",
     bottom: 10,
     left: '15%',
