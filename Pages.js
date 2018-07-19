@@ -12,6 +12,8 @@ class Pages extends Component {
 
        <View  style={styles.paper} >
         <Image source={require('./assets/text/phone/t1.png')} />
+        <Image style={styles.prev} source={require('./assets/text/phone/ui_prev.png')} />
+        <Image style={styles.next} source={require('./assets/text/phone/ui_next.png')} />
       </View>
 
       </ImageBackground>
@@ -33,6 +35,16 @@ const styles = StyleSheet.create({
     bottom: -5,
     left: '15%',
     width: '100%',
+  },
+  prev: {
+    position: "absolute",
+    bottom: 30,
+    left: -70,
+  },
+  next: {
+    position: "absolute",
+    bottom: 30,
+    right: 140,
   },
   parentFlex: {
     flex:1,
