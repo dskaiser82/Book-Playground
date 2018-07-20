@@ -9,11 +9,7 @@ import Pages from './Pages.js';
 
 export default class App extends React.Component {
 
-  state = {
-vo: true,
-music: true,
-counter: 0,
-}
+
 
 //possible Routs 1) Home 2) Select 3) Pages
 
@@ -37,7 +33,7 @@ counter: 0,
 
 
    componentDidMount(){
-  
+
        // this.playSound()
        // this.playVO()
        //Expo force landscape
@@ -50,7 +46,7 @@ counter: 0,
       <View>
 
         <Pages
-          counter={this.state.counter}
+          // counter={this.state.counter}
         />
 
 

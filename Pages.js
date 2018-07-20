@@ -4,17 +4,29 @@ import { StyleSheet, Text, View, Image, Button, ImageBackground, Alert, Touchabl
 
 class Pages extends Component {
 
+  state = {
+vo: true,
+music: true,
+counter: 5,
+}
+
   changePage = () => {
        let go = "go"
        Alert.alert(go);
   }
 
-  render() {
 
+
+  render() {
+const { counter } = this.state
+let url = 4
   return (
+
     <View>
       <ImageBackground
-       source={require('./assets/pages/phone/p1.jpg')}  style={styles.backGround}>
+        source={{uri: 'https://vignette.wikia.nocookie.net/ssb/images/f/ff/Paper_Mario.jpg/revision/latest/scale-to-width-down/480?cb=20080114235714'+url}}  style={styles.backGround}>
+
+       <Text>{counter}</Text>
 
        <View  style={styles.paper} >
         <Image source={require('./assets/text/phone/t1.png')} />
@@ -42,7 +54,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   paper: {
-    backgroundColor: 'rgba(52, 52, 52, 0.8)',
+    // backgroundColor: 'rgba(52, 52, 52, 0.8)',
     position: "absolute",
     bottom: -5,
     left: '15%',
