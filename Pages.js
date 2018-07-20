@@ -7,7 +7,7 @@ class Pages extends Component {
   state = {
 vo: true,
 music: true,
-counter: 4,
+counter: 2,
 }
 
   changePage = () => {
@@ -24,7 +24,7 @@ const { counter } = this.state
 
     <View>
       <ImageBackground
-        source={{uri: 'http://d2pk31lhknsw9z.cloudfront.net/iphone/pages/p'+counter+'.jpg'}}  style={styles.backGround}>
+        source={{uri: `http://d2pk31lhknsw9z.cloudfront.net/iphone/pages/p${counter}.jpg`}}  style={styles.backGround}>
 
        <Text>{counter}</Text>
 
