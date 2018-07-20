@@ -19,12 +19,12 @@ counter: 5,
 
   render() {
 const { counter } = this.state
-let url = 4
+
   return (
 
     <View>
       <ImageBackground
-        source={{uri: 'https://vignette.wikia.nocookie.net/ssb/images/f/ff/Paper_Mario.jpg/revision/latest/scale-to-width-down/480?cb=20080114235714'+url}}  style={styles.backGround}>
+        source={{uri: 'http://d2pk31lhknsw9z.cloudfront.net/iphone/pages/p2.jpg'}}  style={styles.backGround}>
 
        <Text>{counter}</Text>
 
