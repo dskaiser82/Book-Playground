@@ -7,12 +7,13 @@ class Pages extends Component {
   state = {
 vo: true,
 music: true,
-counter: 2,
+counter: 1,
 }
 
   changePage = () => {
-       let go = "go"
-       Alert.alert(go);
+       this.setState((prevState) => ({
+         counter: prevState.counter +1
+       }))
   }
 
 
@@ -30,7 +31,7 @@ const { counter } = this.state
 
        <View  style={styles.paper} >
         <Image source={require('./assets/text/phone/t1.png')} />
-        <TouchableHighlight onPress={this.changePage}>
+        <TouchableHighlight>
           <Image
             style={styles.prev} source={require('./assets/text/phone/ui_prev.png')}
           />
