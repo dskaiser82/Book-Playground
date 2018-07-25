@@ -7,12 +7,18 @@ class Pages extends Component {
   state = {
 vo: true,
 music: true,
-counter: 2,
+counter: 1,
 }
 
   changePage = () => {
        this.setState((prevState) => ({
          counter: prevState.counter +1
+       }))
+  }
+
+  prevPage = () => {
+       this.setState((prevState) => ({
+         counter: prevState.counter -1
        }))
   }
 
@@ -25,13 +31,13 @@ const { counter } = this.state
 
     <View>
       <ImageBackground
-        source={{uri: `http://d2pk31lhknsw9z.cloudfront.net/ipad/pages/v1/p${counter}.jpg`}}  style={styles.backGround}>
+        source={{uri: `http://d2pk31lhknsw9z.cloudfront.net/iphone/pages/v1/p${counter}.jpg`}}  style={styles.backGround}>
 
        <Text>{counter}</Text>
 
        <View  style={styles.paper} >
         {/* <Image source={require('./assets/text/phone/t1.png')} /> */}
-        <TouchableHighlight>
+        <TouchableHighlight onPress={this.prevPage}>
           <Image
             style={styles.prev} source={require('./assets/text/phone/ui_prev.png')}
           />
