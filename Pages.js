@@ -12,13 +12,13 @@ counter: 1,
 
   changePage = () => {
        this.setState((prevState) => ({
-         counter: prevState.counter +1
+         counter: (prevState.counter%14) +1
        }))
   }
 
   prevPage = () => {
        this.setState((prevState) => ({
-         counter: prevState.counter -1
+         counter: (prevState.counter%14) -1
        }))
   }
 
