@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, Button, ImageBackground, Alert, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, ImageBackground, Alert, TouchableHighlight, Platform } from 'react-native';
 
 
 class Pages extends Component {
@@ -10,6 +10,7 @@ music: true,
 counter: 1,
 }
 
+//Show Arrow if Counter > 1
   changePage = () => {
        this.setState((prevState) => ({
          counter: (prevState.counter%14) +1
@@ -26,6 +27,7 @@ counter: 1,
 
   render() {
 const { counter } = this.state
+
 
   return (
 
