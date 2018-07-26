@@ -31,7 +31,7 @@ const { counter } = this.state
 
     <View>
       <ImageBackground
-        source={{uri: `http://d2pk31lhknsw9z.cloudfront.net/iphone/pages/v1/p${counter}.jpg`}}  style={styles.backGround}>
+        source={{uri: `http://d2pk31lhknsw9z.cloudfront.net/iphone/pages/v2/p${counter}.jpg`}}  style={styles.backGround}>
 
        <Text>{counter}</Text>
 
