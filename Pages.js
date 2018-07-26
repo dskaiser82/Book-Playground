@@ -10,7 +10,7 @@ music: true,
 counter: 1,
 }
 
-//Show Arrow if Counter > 1
+//Show Arrow if Counter >
   changePage = () => {
        this.setState((prevState) => ({
          counter: (prevState.counter%14) +1
@@ -40,9 +40,16 @@ const { counter } = this.state
        <View  style={styles.paper} >
         {/* <Image source={require('./assets/text/phone/t1.png')} /> */}
         <TouchableHighlight onPress={this.prevPage}>
-          <Image
-            style={styles.prev} source={require('./assets/text/phone/ui_prev.png')}
-          />
+          {/* only show back arrow on p2 or more */}
+          {counter > 1 ?
+            <Image
+              style={styles.prev} source={require('./assets/text/phone/ui_prev.png')}
+            />
+            :
+            <Image
+              style={styles.prev}
+            />
+          }
         </TouchableHighlight>
 
         <TouchableHighlight onPress={this.changePage}>
