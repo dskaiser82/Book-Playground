@@ -20,7 +20,7 @@ class Pages extends Component {
 
        <View  style={styles.paper} >
         {/* <Image source={require('./assets/text/phone/t1.png')} /> */}
-        <TouchableHighlight onPress={prevPage}>
+        <TouchableHighlight onPress={() => prevPage(playVO)}>
           {/* only show back arrow on p2 or more */}
           {counter > 1 ?
             <Image

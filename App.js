@@ -25,10 +25,13 @@ export default class App extends React.Component {
 
     }
 
-    prevPage = () => {
+    prevPage = (callback) => {
          this.setState((prevState) => ({
            counter: (prevState.counter%14) -1
          }))
+
+         //callback will be playVO()
+         callback()
     }
 
 
@@ -57,7 +60,7 @@ export default class App extends React.Component {
 
    componentDidMount(){
 
-       // this.playSound()
+       this.playSound()
 
        //Expo force landscape
        ScreenOrientation.allow(Expo.ScreenOrientation.Orientation.LANDSCAPE);
