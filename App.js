@@ -15,10 +15,13 @@ export default class App extends React.Component {
 
 
   //Show Arrow if Counter >
-    changePage = () => {
+    changePage = (callback) => {
          this.setState((prevState) => ({
            counter: (prevState.counter%14) +1
          }))
+
+      callback()
+
     }
 
     prevPage = () => {
@@ -68,6 +71,7 @@ export default class App extends React.Component {
           counter={this.state.counter}
           changePage={this.changePage}
           prevPage={this.prevPage}
+          playVO={this.playVO}
         />
 
 

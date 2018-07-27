@@ -7,7 +7,7 @@ class Pages extends Component {
 
 
   render() {
-  const { counter, prevPage, changePage } = this.props
+  const { counter, prevPage, changePage, playVO } = this.props
 
 
   return (
@@ -33,7 +33,7 @@ class Pages extends Component {
           }
         </TouchableHighlight>
 
-        <TouchableHighlight onPress={changePage}>
+        <TouchableHighlight onPress={() => changePage(playVO)}>
           <Image style={styles.next} source={require('./assets/text/phone/ui_next.png')} />
         </TouchableHighlight>
       </View>
