@@ -47,7 +47,7 @@ export default class App extends React.Component {
    playVO = async () => {
       await Audio.setIsEnabledAsync(true);
       const sound = new Audio.Sound();
-      await sound.loadAsync(require('./assets/vo/m2.mp3'));
+    await sound.loadAsync({uri:`http://d2pk31lhknsw9z.cloudfront.net/vo/m${this.state.counter}.mp3`});
       await sound.playAsync();
 
     }
