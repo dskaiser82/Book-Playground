@@ -16,7 +16,7 @@ export default class App extends React.Component {
   playSound = async () => {
      await Audio.setIsEnabledAsync(true);
      const sound = new Audio.Sound();
-     await sound.loadAsync(require('./assets/music/ambient.mp3'));
+     await sound.loadAsync({uri:'http://d2pk31lhknsw9z.cloudfront.net/music/ambient.mp3'});
      await sound.playAsync();
      await sound.setIsLoopingAsync(true); //Loop Ambient
    }
