@@ -4,29 +4,10 @@ import { StyleSheet, Text, View, Image, Button, ImageBackground, Alert, Touchabl
 
 class Pages extends Component {
 
-  state = {
-vo: true,
-music: true,
-counter: 1,
-}
-
-//Show Arrow if Counter >
-  changePage = () => {
-       this.setState((prevState) => ({
-         counter: (prevState.counter%14) +1
-       }))
-  }
-
-  prevPage = () => {
-       this.setState((prevState) => ({
-         counter: (prevState.counter%14) -1
-       }))
-  }
-
 
 
   render() {
-const { counter } = this.state
+  const { counter, prevPage, changePage } = this.props
 
 
   return (
@@ -39,7 +20,7 @@ const { counter } = this.state
 
        <View  style={styles.paper} >
         {/* <Image source={require('./assets/text/phone/t1.png')} /> */}
-        <TouchableHighlight onPress={this.prevPage}>
+        <TouchableHighlight onPress={prevPage}>
           {/* only show back arrow on p2 or more */}
           {counter > 1 ?
             <Image
@@ -52,7 +33,7 @@ const { counter } = this.state
           }
         </TouchableHighlight>
 
-        <TouchableHighlight onPress={this.changePage}>
+        <TouchableHighlight onPress={changePage}>
           <Image style={styles.next} source={require('./assets/text/phone/ui_next.png')} />
         </TouchableHighlight>
       </View>

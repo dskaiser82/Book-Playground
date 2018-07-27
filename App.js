@@ -1,13 +1,32 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button, ImageBackground, Alert } from 'react-native';
 import { Audio, ScreenOrientation } from 'expo';
-
 import Pages from './Pages.js';
 
 
 
-
 export default class App extends React.Component {
+  state = {
+  vo: true,
+  music: true,
+  counter: 1,
+  }
+
+
+
+  //Show Arrow if Counter >
+    changePage = () => {
+         this.setState((prevState) => ({
+           counter: (prevState.counter%14) +1
+         }))
+    }
+
+    prevPage = () => {
+         this.setState((prevState) => ({
+           counter: (prevState.counter%14) -1
+         }))
+    }
+
 
 
 
@@ -46,7 +65,9 @@ export default class App extends React.Component {
       <View>
 
         <Pages
-          // counter={this.state.counter}
+          counter={this.state.counter}
+          changePage={this.changePage}
+          prevPage={this.prevPage}
         />
 
 
@@ -55,15 +76,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // },
-  // texter: {
-  //   fontSize: 30,
-  //   paddingBottom: 50,
-  // }
-});
